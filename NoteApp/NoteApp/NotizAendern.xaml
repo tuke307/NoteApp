@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NoteApp.NotizAendern"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry
+                    x:Name="Ueberschrift"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    IsSpellCheckEnabled="false"
+                    IsTextPredictionEnabled="false"
+                    MaxLength="100"
+                    Placeholder="Überschrift/Tietl" />
+
+                <Editor
+                    x:Name="TextFeld"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="10"
+                    HeightRequest="590"
+                    Placeholder="hier Text eingeben" />
+
+
+                <Grid
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="LightSkyBlue">
+
+                    <Button
+                        x:Name="BtnSave"
+                        Grid.Column="0"
+                        BackgroundColor="LightSkyBlue"
+                        Clicked="Speichern_Button"
+                        Text="Speichern" />
+
+
+                    <Button
+                        x:Name="BtnDelete"
+                        Grid.Column="1"
+                        BackgroundColor="LightSkyBlue"
+                        Clicked="LöschenButton"
+                        Text="löschen" />
+
+
+
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
